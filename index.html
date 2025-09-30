@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Violão - PreSell</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17554256956"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17554256956');
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Fundo com leve desfoque */
+    .background {
+      background-image: url('imagem-de-fundo.png');
+      background-size: cover;
+      background-position: center;
+      filter: blur(4px) brightness(0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      transition: filter 0.5s ease;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    /* Pop-up de cookies */
+    .cookie-box {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      padding: 30px 35px;
+      max-width: 450px;
+      width: 90%;
+      text-align: left;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    /* Ativar animação do pop-up */
+    .cookie-box.active {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .cookie-header {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .cookie-text {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 25px;
+      gap: 10px;
+    }
+
+    .btn-accept {
+      background-color: #ff6600;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-accept:hover {
+      background-color: #e65c00;
+      transform: scale(1.05);
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 14px;
+      color: #999;
+      cursor: pointer;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .btn-close:hover {
+      color: #333;
+    }
+
+    @media (max-width: 480px) {
+      .cookie-box {
+        padding: 25px 20px;
+      }
+
+      .cookie-buttons {
+        flex-direction: column;
+      }
+
+      .btn-accept {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="cookie-box" id="cookieBox">
+    <div class="btn-close" onclick="redirect()">Fechar</div>
+    <div class="cookie-header">Política de Cookies</div>
+    <div class="cookie-text">
+      Este site utiliza cookies para oferecer a melhor experiência possível. Ao clicar em <strong>Aceitar</strong>, você concorda com o uso de cookies.
+    </div>
+    <div class="cookie-buttons">
+      <button class="btn-accept" onclick="redirect()">Aceitar</button>
+    </div>
+  </div>
+
+  <script>
+    // Exibe pop-up com animação após carregamento
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('cookieBox').classList.add('active');
+      }, 300);
+    });
+
+    function redirect() {
+      window.location.href = "https://go.hotmart.com/J101910494X";
+    }
+  </script>
+
+</body>
+</html>
